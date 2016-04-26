@@ -1,12 +1,12 @@
 express-nodejs-mongo-webstock
 ----------------------
 my study beginning<br>
-from now on, i will rich this project ,and let it useful. we plan to make a web stock scanning app.
+from now on, i will enrich this project ,and let it useful. we plan to make a web stock scanning app.
 
 
 #the packages inculded in this project
 
-{
+<pre>{
   "name": "express-nodejs-mongo-webstock",
   "version": "0.0.0",
   "private": true,
@@ -22,17 +22,19 @@ from now on, i will rich this project ,and let it useful. we plan to make a web 
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
   }
-}
+}</pre>
 
 #install this
-npm install express-nodejs-webstock -g
+`npm install express-nodejs-webstock -g`
 
 #usage
-1. list the stock of selected.
-2. show stock statuc and check it at intervals, and this stock will be save to selected after you clicked the interested button.
-3. query stock info by code or name
-4. add stock to mongo then u can use list item to display it's status.
-5. remove stock from mongo
+##show
+  1.list the stock of selected.
+  2.remove a stock which you are not interested.
+##query
+  1. show stock statuc and check it at intervals, and this stock will be save to selected after you clicked the interested button.
+  2. query stock info by code or name
+  3. add stock to mongo then u can use list item to display it's status.
 
 #shortcut
 coming
