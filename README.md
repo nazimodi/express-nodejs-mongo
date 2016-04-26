@@ -29,8 +29,9 @@ from now on, i will enrich this project ,and let it useful. we plan to make a we
 
 #usage
 ##show
-  1.list the stock of selected.
-  2.remove a stock which you are not interested.
+  1. list the stock of selected.
+  2. remove a stock which you are not interested.
+
 ##query
   1. show stock statuc and check it at intervals, and this stock will be save to selected after you clicked the interested button.
   2. query stock info by code or name
