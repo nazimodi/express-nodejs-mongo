@@ -37,6 +37,7 @@ from now on, i will enrich this project ,and let it useful. we plan to make a we
   1. show stock statuc and check it at intervals, and this stock will be save to selected after you clicked the interested button.
   2. query stock info by code or name
   3. add stock to mongo then u can use list item to display it's status.
+
 tips: during the first stage ,we choose to save the stock info in file(stock.json), just for other can easily start the project.
 
 #shortcut
