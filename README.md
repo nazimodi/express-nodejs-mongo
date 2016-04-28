@@ -1,11 +1,13 @@
-express-nodejs-mongo
+express-nodejs-mongo-webstock
 ----------------------
-my study beginning
-from now on, i will rich this project ,and let it useful.
+my study beginning<br>
+from now on, i will enrich this project ,and let it useful. we plan to make a web stock scanning app.
+
 
 #the packages inculded in this project
-{
-  "name": "express-nodejs-mongo",
+
+<pre>{
+  "name": "express-nodejs-mongo-webstock",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -20,4 +22,23 @@ from now on, i will rich this project ,and let it useful.
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
   }
-}
+}</pre>
+
+#install this
+`npm install express-nodejs-webstock -g`
+
+#usage
+##show
+  1. list the stock of selected.
+  2. remove a stock which you are not interested.
+
+##query
+  1. show stock statuc and check it at intervals, and this stock will be save to selected after you clicked the interested button.
+  2. query stock info by code or name
+  3. add stock to mongo then u can use list item to display it's status.
+
+#shortcut
+coming
+
+#multiple selected stock info source
+we will display a target stock detail that from some big stock trade platform ,eg http://www.gw.com.cn/,http://xueqiu.com
