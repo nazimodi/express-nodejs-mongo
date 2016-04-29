@@ -8,7 +8,7 @@ from now on, i will enrich this project ,and let it useful. we plan to make a we
 
 <pre>{
   "name": "express-nodejs-mongo-webstock",
-  "version": "0.0.0",
+  "version": "0.0.10",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -45,3 +45,4 @@ coming
 
 #multiple selected stock info source
 we will display a target stock detail that from some big stock trade platform ,eg http://www.gw.com.cn/,http://xueqiu.com
+i plan to use ajax to query the stock info. 
