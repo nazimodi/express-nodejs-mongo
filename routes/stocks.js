@@ -1,7 +1,8 @@
 var express = require('express');
-var router = express.Router;
-var config = require('../config/config.js')
-var stocks = require('../config/stocks.js')
+var router = express.Router();
+var path = require('path');
+var config = require('../config/config.js');
+var stocks = path.join(__dirname + '../config/stocks.json');
 var request = require('request');
 request = request.defaults({
     jar: true,
@@ -12,12 +13,15 @@ request = request.defaults({
 });
 
 router.get('/', function (req, res, next) {
-    stocks.forEach(function (element) {
-        request.get(config.stockApi.xueqiu.site, function () {
-            request.get(config.stockApi.xueqiu.query.replace(/\{key\}/, element.name), function (error, res, body) {
-                res.render('stocks', { stocksList: infos, stockTermMap: config.stockTermMap });
-            });
+    element = { 'name': 'alibaba' };
+    request.get(config.stockApi.xueqiu.site, function () {
+        request.get(config.stockApi.xueqiu.query.replace(/\{key\}/, element.name), function (error, response, body) {
+            if (!error) {
+                res.render('stocks', { title: 'xixi', stocksList: JSON.parse(body).stocks, stockTermMap: config.stockTermMap });
+            } else {
+                res.render('stocks', {});
+            }
         });
-    }, this);
+    });
 });
 module.exports = router;

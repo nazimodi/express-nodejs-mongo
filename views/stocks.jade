@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  div#stocksInfo 
+  nav
+      each stock in stocksList
+        ul
+          each item, key in stock
+            li #{key}:#{item}
