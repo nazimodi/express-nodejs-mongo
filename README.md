@@ -25,7 +25,7 @@ from now on, i will enrich this project ,and let it useful. we plan to make a we
 }</pre>
 
 #install
-`npm install express-nodejs-webstock -g`
+`npm install express-nodejs-mongo-webstock -g`
 
 #usage
 
