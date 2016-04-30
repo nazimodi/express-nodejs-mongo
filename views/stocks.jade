@@ -3,8 +3,12 @@ extends layout
 block content
   h1= title
   div#stocksInfo 
-  nav
-      each stock in stocksList
-        ul
-          each item, key in stock
-            li #{key}:#{item}
+  nav 
+    ul.row
+      each item in stockTermMap
+        ol.col-md-1 #{item}
+    each stock in stockInfos
+      ul.row
+        each item, key in stockTermMap
+          -console.log(key);
+          ol.col-md-1= stock[key]

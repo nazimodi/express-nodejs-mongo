@@ -13,11 +13,11 @@ request = request.defaults({
 });
 
 router.get('/', function (req, res, next) {
-    element = { 'name': 'alibaba' };
+    element = { 'name': 'alibaba', 'code': '01688'};
     request.get(config.stockApi.xueqiu.site, function () {
-        request.get(config.stockApi.xueqiu.query.replace(/\{key\}/, element.name), function (error, response, body) {
+        request.get(config.stockApi.xueqiu.info.replace(/\{code\}/, element.code), function (error, response, body) {
             if (!error) {
-                res.render('stocks', { title: 'xixi', stocksList: JSON.parse(body).stocks, stockTermMap: config.stockTermMap });
+                res.render('stocks', { title: 'xixi', stockInfos: JSON.parse(body), stockTermMap: config.stockTermMap });
             } else {
                 res.render('stocks', {});
             }

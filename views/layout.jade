@@ -1,7 +1,15 @@
 doctype html
 html
   head
+    meta(http-equit='Content-Type', content='text/html;charset=uft-8') 
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+
   body
-    block content
+    .container
+      block content
+    block script
+      script(src='//cdn.bootcss.com/jquery/1.11.3/jquery.min.js')
+      script(src='/js/bootstrap.min.js')
+    include foot
