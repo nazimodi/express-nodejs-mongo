@@ -45,4 +45,4 @@ coming
 
 #multiple selected stock info source
 we will display a target stock detail that from some big stock trade platform ,eg http://www.gw.com.cn/,http://xueqiu.com
-i plan to use ajax to query the stock info. 
+i plan to use ajax to query the stock info. with promise
