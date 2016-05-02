@@ -1,8 +1,9 @@
 var express = require('express');
+var bluebird = require('bluebird');
 var router = express.Router();
 var path = require('path');
 var config = require('../config/config.js');
-var stocks = path.join(__dirname + '../config/stocks.json');
+var stocks = require('../config/stocks.json');
 var request = require('request');
 request = request.defaults({
     jar: true,
@@ -13,9 +14,11 @@ request = request.defaults({
 });
 
 router.get('/', function (req, res, next) {
-    element = { 'name': 'alibaba', 'code': '01688'};
+    codes = Object.keys(stocks).map(function (item, index) {
+        return [stocks[item].code];
+    }).join(',');
     request.get(config.stockApi.xueqiu.site, function () {
-        request.get(config.stockApi.xueqiu.info.replace(/\{code\}/, element.code), function (error, response, body) {
+        request.get(config.stockApi.xueqiu.info.replace(/\{code\}/, codes), function (error, response, body) {
             if (!error) {
                 res.render('stocks', { title: 'xixi', stockInfos: JSON.parse(body), stockTermMap: config.stockTermMap });
             } else {
