@@ -5,11 +5,14 @@ html
     title= title
     link(rel='stylesheet', href='/css/style.css')
     link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/app.css')
 
   body
-    .container
+    include head
+    div.container-fluid
       block content
+    include foot
     block script
       script(src='//cdn.bootcss.com/jquery/1.11.3/jquery.min.js')
       script(src='/js/bootstrap.min.js')
-    include foot
+      script(src='/js/app.js')      

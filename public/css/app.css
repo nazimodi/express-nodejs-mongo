@@ -1,0 +1,17 @@
+.navbar-default {
+    background-color: #333
+}
+.navbar-default .navbar-nav > li {
+    width: 100px
+}
+.navbar-default .navbar-nav > li > a, .text-muted {
+    color: #FFF;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:hover,
+.navbar-default .navbar-nav > li.active > a:focus {
+    color: #AAA;
+    background-color: #333
+}
