@@ -2,7 +2,7 @@ express-nodejs-mongo-webstock
 ----------------------
 my study beginning<br>
 from now on, i will enrich this project ,and let it useful. we plan to make a web stock scanning app.
-
+today, i think about a question all the time. how can i learn the latest tech, actually i think the tech in IT not updated so fast, just some format of code modified.so , i still plan to learn the tech step by step.
 
 #the packages inculded in this project
 
